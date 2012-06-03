@@ -1,0 +1,2 @@
+module 'rabbit', ->
+  hole: 'deep'

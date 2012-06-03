@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang=en>
+<meta charset="utf-8">
+<title>Async Loader Test</title>
+<script src="js/loader.js"></script>
+<script>
+  module.registerExternal('jquery', '$', function () { return $.noConflict(); });
+  module.registerExternal('underscore', '_', function () { return _.noConflict(); });
+  module('main', function ($, test) {
+    $(function () {
+      $('#out').text(test.hello());
+    });
+  });
+</script>
+<div id="out">Loading...</div>
